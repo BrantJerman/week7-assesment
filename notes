@@ -1,0 +1,29 @@
+So, as we can see by the results of the test, the append function is much quicker.
+The reason being is that .push is just pushing to the end of the array while 
+.unshift is putting the new value at the start of the array, shfiting all the other values
+over one index, therefore looping through the entire array each time it executes. 
+
+Results for the extraLargeArray
+insert 768.932167 ms
+append 1.863833 ms
+
+Results for the LargeArray
+insert 6.474709 ms
+append 417.125 μs
+
+Results for the mediumArray
+insert 117.75 μs
+append 81.042 μs
+
+Results for the smallArray
+insert 32.5 μs
+append 77.917 μs
+
+Results for the tinyArray
+insert 22.292 μs
+append 76.791 μs
+
+As you can see, when there is less indexs for each function to run through, the insert function (.unshift)
+becomes much faster than append (.push). Just as the arrays become larger, so does the run time for the insert
+function. Append is better for bigger arrays while insert is better for smaller arrays. Append scales much better. 
+
